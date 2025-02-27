@@ -7,18 +7,25 @@ import { toast } from 'react-toastify';
 import { MdNotificationAdd } from "react-icons/md";
 
 const Navbar = () => {
-    const { user, signOutUser } = useContext(AuthContext);
+    // const { user, signOutUser } = useContext(AuthContext);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleSignOut = () => {
-        signOutUser()
-            .then(() => {
-                toast.success('Sign out successfully');
-            })
-            .catch(error => {
-                toast.error('ERROR', error.message);
-            });
-    };
+    // const handleSignOut = () => {
+    //     signOutUser()
+    //         .then(() => {
+    //             toast.success('Sign out successfully');
+    //         })
+    //         .catch(error => {
+    //             toast.error('ERROR', error.message);
+    //         });
+    // };
+
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+        .then(() => { })
+        .catch(error => console.log(error));
+      }
 
     // Toggle dropdown
     const toggleDropdown = () => {
@@ -68,7 +75,7 @@ const Navbar = () => {
                                     <li className="px-4 py-2 hover:bg-gray-100" onClick={closeDropdown}>
                                         <Link to='/dashboard'>Dashboard</Link>
                                     </li>
-                                    <li className="px-4 py-2 border-t hover:bg-gray-100 cursor-pointer" onClick={handleSignOut}>
+                                    <li className="px-4 py-2 border-t hover:bg-gray-100 cursor-pointer" onClick={handleLogOut}>
                                         Sign Out
                                     </li>
                                 </ul>

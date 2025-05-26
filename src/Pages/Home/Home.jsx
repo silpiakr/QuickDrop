@@ -2,6 +2,7 @@ import React from 'react';
 // import { Navbar } from '../Shared/Navbar/Navbar';
 import Banner from '../Banner/Banner';
 import OurFeatures from '../OurFeatures/OurFeatures';
+import TopDeliveryMen from '../AllDeliveryMen/TopDeliveryMen';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             </section>
             <Banner></Banner>
             <OurFeatures></OurFeatures>
+            <TopDeliveryMen></TopDeliveryMen>
             {/* <OurFeatures stats={stats}></OurFeatures>  */}
             
         </div>

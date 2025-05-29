@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { Outlet } from 'react-router-dom';
+import SidebarMenu from './SidebarMenu/SidebarMenu';
+// import useUserRole from './UserRole/UserRole';
 import { AuthContext } from '@/provider/AuthProvider';
-import useUserRole from '@/hooks/useUserRole'; // Custom hook to get user role
-import SidebarMenu from './SidebarMenu';
+
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
-  const { role, loading } = useUserRole(); // returns 'User' | 'Admin' | 'DeliveryMen'
+  const { role, loading } = useUserRole(); 
 
   if (loading) return <div>Loading...</div>;
 

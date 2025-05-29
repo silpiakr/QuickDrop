@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "./useAxiosSecure";
 
-
-
 const useParcelReq = () => {
     //tan stack query
     const axiosSecure = useAxiosSecure();

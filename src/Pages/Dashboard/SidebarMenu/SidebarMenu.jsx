@@ -7,23 +7,23 @@ const SidebarMenu = ({ role }) => {
       <ul className="space-y-2">
         {role === 'User' && (
           <>
-            <li><Link to="/dashboard/book-parcel">📦 Book a Parcel</Link></li>
-            <li><Link to="/dashboard/my-parcels">📄 My Parcels</Link></li>
-            <li><Link to="/dashboard/my-profile">👤 My Profile</Link></li>
+            <li><Link to="book-parcel">📦 Book a Parcel</Link></li>
+            <li><Link to="my-parcels">📄 My Parcels</Link></li>
+            <li><Link to="my-profile">👤 My Profile</Link></li>
           </>
         )}
         {role === 'DeliveryMen' && (
           <>
-            <li><Link to="/dashboard/delivery-list">🚚 My Delivery List</Link></li>
-            <li><Link to="/dashboard/my-reviews">⭐ My Reviews</Link></li>
+            <li><Link to="delivery-list">🚚 My Delivery List</Link></li>
+            <li><Link to="my-reviews">⭐ My Reviews</Link></li>
           </>
         )}
         {role === 'Admin' && (
           <>
-            <li><Link to="/dashboard/all-parcels">📦 All Parcels</Link></li>
-            <li><Link to="/dashboard/all-users">👥 All Users</Link></li>
-            <li><Link to="/dashboard/delivery-men">🧍 All Delivery Men</Link></li>
-            <li><Link to="/dashboard/statistics">📊 Statistics</Link></li>
+            <li><Link to="all-parcels">📦 All Parcels</Link></li>
+            <li><Link to="all-users">👥 All Users</Link></li>
+            <li><Link to="delivery-men">🧍 All Delivery Men</Link></li>
+            <li><Link to="statistics">📊 Statistics</Link></li>
           </>
         )}
       </ul>

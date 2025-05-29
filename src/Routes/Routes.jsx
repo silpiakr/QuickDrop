@@ -5,6 +5,7 @@ import Login from "@/Pages/Auth/Login/Login";
 import Register from "@/Pages/Auth/Register/Register";
 import ErrorPage from "@/Pages/ErrorPage/ErrorPage";
 import AllParcels from "@/Pages/AllParcels/AllParcels";
+import Dashboard from "@/Pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: 'parcels',
         element: <AllParcels></AllParcels>,
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard></Dashboard>
       }
     ],
   },
